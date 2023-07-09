@@ -46,28 +46,28 @@ class image_subscribers:
         
         if sensors['FRONT'] > 3 and sensors['LEFT'] > 1 and sensors['RIGHT'] > 1 :
             move_by(0.01,0,0,0)
-            rospy.loginfo("Straight poina")
+            
         elif sensors['FRONT'] < 3 and sensors['LEFT'] > 1 and sensors['RIGHT'] > 1:
             move_by(0,0,0,math.pi*0.05/180)
-            rospy.loginfo("left tirgi poina mundhu addu")
+            
         elif sensors['FRONT'] > 3 and sensors['LEFT'] > 1 and sensors['RIGHT'] < 1:
             move_by(0,0,0,math.pi*0.05/180)
-            rospy.loginfo("left tirgi poina right addu")
+        
         elif sensors['FRONT'] > 3 and sensors['LEFT'] < 1 and sensors['RIGHT'] > 1:
             move_by(0,0,0,-math.pi*0.05/180)
-            rospy.loginfo("right tirgi poina")
+            
         elif sensors['FRONT'] < 3 and sensors['LEFT'] > 1 and sensors['RIGHT'] < 1:
             move_by(0,0,0,math.pi*0.05/180)
-            rospy.loginfo("left tirgi poina left tappa anni addu")
+            
         elif sensors['FRONT'] < 3 and sensors['LEFT'] < 1 and sensors['RIGHT'] > 1:
             move_by(0,0,0,-math.pi*0.05/180)
-            rospy.loginfo("right tirgi poina")
+            
         elif sensors['FRONT'] < 3 and sensors['LEFT'] < 1 and sensors['RIGHT'] < 1:
             move_by(0,0,0,0)
-            rospy.loginfo("im stuck bro")
+            
         elif sensors['FRONT'] > 3 and sensors['LEFT'] < 1 and sensors['RIGHT'] < 1:
             move_by(0.01,0,0,0)
-            rospy.loginfo("Straight poina")
+            
         else:
             rospy.loginfo("nothing")
         
