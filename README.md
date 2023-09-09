@@ -1,5 +1,5 @@
 # Drone Dash 2023
-This is the official boilerplate repository for Drone Dash @ Summer of Innovation 2023, IIT Dharwad.
+This is the repository for Drone Dash @ Summer of Innovation 2023, IIT Dharwad.
 
 ## Objective
 The objective of Drone Dash is to design a obstacle avoidance algorithm for a drone. There is an onboard color and depth camera which can be used for this task. You may use any algorithm you like. The goal is to reach the end of the track in the shortest time possible.
@@ -21,17 +21,5 @@ To see the RGB and depth images from the camera in RVIZ, set the `rviz` paramete
 ```bash
 roslaunch dronedash demo.launch rviz:=true
 ```
-
-Note: If the demo does not work, and you encounter the message `Failsafe mode activated` in the terminal see the [Troubleshooting](#failsafe-mode-activated) section.
-
-## Resources
-We have provided a list of recommended resources that you can use to learn more about the development environment and the PX4 Autopilot Stack.
-
-### ROS
-* [ROS Wiki](https://wiki.ros.org/)
-* [ROS Tutorials](https://wiki.ros.org/ROS/Tutorials)
-* [Getting Started With ROS - Articulated Robotics on Youtube](https://youtube.com/playlist?list=PLunhqkrRNRhYYCaSTVP-qJnyUPkTxJnBt)
-
-### PX4 Autopilot
-* [Flight Modes](https://docs.px4.io/v1.13/en/flight_modes/#multicopter)
-* [User Guide](https://docs.px4.io/v1.13/en/ros/ros1.html)
+## image_subscriber.py
+This node takes images from the onboard RGBD camera and converts them into arrays. Then it calculates distance from depth images. The drone is able to avoid the obstacles and navigate through the worlds. A further development is adding landing algorithm. I'm currently working on adding SLAM to this project.
